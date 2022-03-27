@@ -6,6 +6,8 @@ name: Node.js Package
 on:
   release:
     types: [created]
+  push:
+    branches: [development]
 
 jobs:
   build:
@@ -15,8 +17,12 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
-      - run: npm ci
-      - run: npm test
+      - run: |
+          cd vscode-extension-template
+          npm ci
+      - run: |
+          cd vscode-extension-template
+          npm test
 
   publish-npm:
     needs: build
@@ -27,7 +33,11 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
-      - run: npm publish
+      - run: |
+          cd vscode-extension-template
+          npm ci
+      - run: |
+          cd vscode-extension-template
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
