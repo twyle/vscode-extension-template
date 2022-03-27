@@ -1,6 +1,5 @@
 # vscode-extension-template README
 
-This is the README for your extension "vscode-extension-template". After writing up a brief description, we recommend including the following sections.
 
 ## Features
 
