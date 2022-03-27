@@ -1,2 +1,2 @@
 # vscode-extension-template
-A template for creating vscode extensions
+A template for creating vscode extensions.
