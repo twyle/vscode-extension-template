@@ -1,6 +1,7 @@
 {
-  "name": "vscode-extension-template",
+  	"name": "vscode-extension-template",
 	"displayName": "vscode-extension-template",
+	"publisher": "twyle",
 	"description": "A template for creating vscode extensions.",
 	"version": "0.0.1",
 	"engines": {
